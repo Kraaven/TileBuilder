@@ -25,7 +25,6 @@ public class GenerateTiles : MonoBehaviour
                 if (i == size - 1 || j == size -1  || i == -1*(size-1) || j == -1*(size-1))
                 {
                     Instantiate(tile, new Vector3(currentpos.x + i*2, currentpos.y,currentpos.z + j*2 ), Quaternion.identity);
-                    Debug.Log(new Vector2(i,j));
                 }
                 
                 
