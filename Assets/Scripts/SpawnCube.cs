@@ -10,12 +10,13 @@ public class SpawnCube : MonoBehaviour
     public Material  sel;
     public Material unsel;
     public bool selected = false;
+
+    public bool Occupied;
     
     public int ID;
     // Start is called before the first frame update
     private void Start()
     {
-        gameObject.transform.SetParent(GameObject.FindGameObjectWithTag("Board").transform,false);
         ID = Random.Range(0, 1000);
     }
 
@@ -25,12 +26,10 @@ public class SpawnCube : MonoBehaviour
         switch (selected)
         {
             case true:
-                gameObject.transform.GetChild(0).GetComponent<Renderer>().material = sel;
-                Debug.Log("Selected");
+                gameObject.GetComponent<Renderer>().material = sel;
                 break;
             case false:
-                gameObject.transform.GetChild(0).GetComponent<Renderer>().material = unsel;
-                Debug.Log("UnSelected");
+                gameObject.GetComponent<Renderer>().material = unsel;
                 break;
                 
         }
