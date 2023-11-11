@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -8,10 +9,14 @@ public class GenerateTiles : MonoBehaviour
 {
     public int tilesize = 2;
     public GameObject tile;
+    public GameObject Player;
     private void Start()
     {
         Instantiate(tile, new Vector3(0, 0, 0), Quaternion.identity);
         GenTiles(tilesize);
+        Collider[] tiles = Physics.OverlapBox(transform.position,new Vector3(0.1f,0.1f,0.1f));
+        tiles[0].transform.parent.GetComponent<SpawnCube>().ToggleSelection();
+        Player.GetComponent<Selector>().Selected = tiles[0].gameObject.transform.parent.gameObject;
     }
 
     private void GenTiles(int size)

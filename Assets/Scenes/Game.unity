@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesize: 2
   tile: {fileID: 65425033658626647, guid: da562ec8ed97f204f8669b07f287f445, type: 3}
+  Player: {fileID: 297785303}
 --- !u!4 &126421391
 Transform:
   m_ObjectHideFlags: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d4bc17359fbd942bb789dc9477e9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Selected: {fileID: 0}
 --- !u!4 &297785305
 Transform:
   m_ObjectHideFlags: 0
