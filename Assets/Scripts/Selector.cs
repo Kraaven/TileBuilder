@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Selector : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Selector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePosition = Input.mousePosition;
+            Vector2 mousePosition = Mouse.current.position.value;
             Ray ray = Camera.main.ScreenPointToRay(mousePosition);
 
             
