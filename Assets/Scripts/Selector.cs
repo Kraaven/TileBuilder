@@ -25,7 +25,10 @@ public class Selector : MonoBehaviour
                     Selected = hit.collider.gameObject;
                     Selected.GetComponent<SpawnCube>().ToggleSelection();
                 }
-                
+                else
+                {
+                    hit.collider.gameObject.GetComponent<ActionObject>().Interact();
+                }
                 
             }
         }

@@ -7,16 +7,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rb;
     public float speed;
     private Vector3 oldmouse;
     private Vector3 newmouse;
     public float rotationspeed;
     public float mousedeltax;
     private bool isrotating;
+    public Camera cam;
+   
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+
         
     }
 
@@ -54,6 +55,17 @@ public class PlayerController : MonoBehaviour
         }
         
         oldmouse = newmouse;
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        
+        if (cam.fieldOfView + scroll > 30 && scroll < 0)
+        {
+            cam.fieldOfView += scroll * 20 ;
+        }
+        if (cam.fieldOfView + scroll < 70 && scroll > 0)
+        {
+            cam.fieldOfView += scroll * 20 ;
+        }
     }
 
     private void FixedUpdate()
