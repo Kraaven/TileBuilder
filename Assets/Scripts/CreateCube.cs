@@ -8,6 +8,7 @@ public class CreateCube : MonoBehaviour
     void Start()
     {
         gameObject.transform.SetParent(GameObject.FindGameObjectWithTag("Board").transform,false);
+        gameObject.transform.Rotate(0,Random.Range(0,4)*90,0);
     }
 
 }

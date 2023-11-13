@@ -149,8 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306156f92fd04dc4aa1bddbb0121eb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilesize: 2
+  tilesize: 1
   tile: {fileID: 65425033658626647, guid: da562ec8ed97f204f8669b07f287f445, type: 3}
+  RockyTile: {fileID: 1199925793145627230, guid: 5c91685c16008404eacee335f5380e93, type: 3}
   Player: {fileID: 297785303}
 --- !u!4 &126421391
 Transform:
